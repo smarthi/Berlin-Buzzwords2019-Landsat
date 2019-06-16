@@ -97,18 +97,74 @@
         </section>
                 <section data-background-image="img/ZsMwlm2-purpleish.jpg">
                     <h3>Data: Landsat8</h3>
-                    <p style='text-align: left'>Earth observation mission from NOAA</p>
+                    <p style='text-align: left'>Earth observation mission from EOS</p>
                     <p style='text-align: left'>10 spectral bands, from RGB to SWIR (Short Wave Infrared)</p>
-                    <p style='text-align: left'>Spatial resolution: 10m/px (RGB bands)</p>
-                    <p style='text-align: left'>Free and open data policy</p>
-                    <img src='img/slide5.png' style=' position: absolute; right: 0px; bottom: 0px; width: 30%; height: 30%; margin: 0px, 0px, 0px, 0px; border: none; background: none;box-shadow: none; '/><br/>
+                    <p style='text-align: left'>Spatial resolution: 30m/px (Visible, NIR bands)</p>
+                    <p style='text-align: left'>Free and open data, data updated each day</p>
+                    <img src='img/landsat_8_01.jpg' style=' position: absolute; right: 0px; bottom: 0px; width: 30%; height: 30%; margin: 0px, 0px, 0px, 0px; border: none; background: none;box-shadow: none; '/><br/>
                 </section>
                 <section data-background-image="img/ZsMwlm2-purpleish.jpg">
-                    <h3>Data: Landsat8</h3>
-                    <div style="background: #c9c9c9;">
-                        <img src='img/landsat_8_01.jpg' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-                    </div>
+                    <h3>Landsat8 Payload</h3>
+                    <p style='text-align: left'>Operational Land Imager (OLI)</p>
+                    <p style='text-align: left'>Thermal Infrared Sensor (TIRS)</p>
+                    <p style='text-align: left'>Resolution of 30m/pixel(visible, NIR, SWIR)</p>
                 </section>
+
+            <section data-background-image="img/ZsMwlm2-yellowish.jpg">
+                <h3>Landsat8 Bands</h3>
+                <table>
+                    <tr><th>Band</th><th>Range(nm)</th><th>Resolution</th><th>Spectrum</th></tr>
+                    <tr><td>B1</td><td>435-451</td><td>30m</td><td>Coastal</td></tr>
+                    <tr><td>B2</td><td>452-512</td><td>30m</td><td>Blue</td></tr>
+                    <tr><td>B3</td><td>533-590</td><td>30m</td><td>Green</td></tr>
+                    <tr><td>B4</td><td>5636-673</td><td>30m</td><td>Red</td></tr>
+                    <tr><td>B5</td><td>851-879</td><td>30m</td><td>NIR</td></tr>
+                    <tr><td>B6</td><td>1566-1651</td><td>30m</td><td>SWIR-1</td></tr>
+                    <tr><td>B7</td><td>2107-2294</td><td>30m</td><td>SWIR-2</td></tr>
+                </table>
+            </section>
+
+                <section data-background-image="img/ZsMwlm2-purpleish.jpg">
+                    <h4>How is this related to Vegetation?</h4>
+                    <p style='text-align: left'>Photosynthetically Active Radiation (PAR) 400 - 700nm range</p>
+                    <p style='text-align: left'>Plants abosrb solar radiation in PAR region</p>
+                    <p style='text-align: left'>Plants re-emit solar radiation in NIR region</p>
+                    <p style='text-align: left'>Hence, plants appear bright in the NIR spectrum</p>
+                    <p style="font-size: 35%;"><i>https://en.wikipedia.org/wiki/Near-infrared_spectroscopy#Agriculture</i></p>
+                </section>
+
+                <section data-background-image="img/ZsMwlm2-greenish.jpg">
+                    <h4>How is this related to Vegetation?</h4>
+                    <p style='text-align: left'>Plant Chlorophyll absorbs visible light (0.4 to 0.7µm)</p>
+                    <p style='text-align: left'>Plant leaves reflect NIR light (0.7 to 1.1µm)</p>
+                    <p style='text-align: left'>More plant leaves, greater the radiance emited from plants</p>
+                    <p style="font-size: 35%;"><i>https://en.wikipedia.org/wiki/Near-infrared_spectroscopy#Agriculture</i></p>
+                </section>
+
+                <section data-background-image="img/ZsMwlm2-blueish.jpg">
+                    <p style='text-align: left'>Difference in plant reflectances can help determine their distribution in satellite imagery</p>
+                    <p style="font-size: 35%;"><i>https://en.wikipedia.org/wiki/Near-infrared_spectroscopy#Agriculture</i></p>
+                </section>
+
+                <section data-background-image="img/ZsMwlm2-redish.jpg">
+                    <h3>How do we measure this phenomenon?</h3>
+                </section>
+
+                <section data-background-image="img/ZsMwlm2-greenish.jpg">
+                    <h4>Normalized Difference Vegetation Index (NDVI)</h4>
+                    <div style="background: #c9c9c9;">
+                        <img src='img/NDVI-formula.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
+                    </div>
+                    <p style='text-align: left'><i>NDVI Range: [-1,1]</i></p>
+                </section>
+
+                <section data-background-image="img/ZsMwlm2-yellowish.jpg">
+                    <p style='text-align: left'>Dense Green Vegetation canopy is typicall 0.3 - 0.8</p>
+                    <p style='text-align: left'>Standing water like Deep Oceans (away from coast) typically have -ve or small +ve values</p>
+                    <p style='text-align: left'>Soil with a high NIR, tends to have a small positive value < 0.2</p>
+                    <p style="font-size: 35%;"><i>https://en.wikipedia.org/wiki/Near-infrared_spectroscopy#Agriculture</i></p>
+                </section>
+
                 <section data-background-image="img/ZsMwlm2-purpleish.jpg">
                     <h4>Workflow</h4>
                     <div style="background: #c9c9c9;">
@@ -123,10 +179,9 @@
                 </section>
         <section data-background-image="img/ZsMwlm2-greenish.jpg">
             <h3>Data acquisition</h3>
-            <p style='text-align: left'>Images downloaded using Sentinel Hub’s WMS (web mapping service)</p>
-            <p style='text-align: left'>Download tool from Matthieu Guillaumin (@mguillau)</p>
+            <p style='text-align: left'>Images downloaded using Sentinel Hub’s WMS (web mapping service) for Landsat</p>
             <table>
-                <td><img src='img/slide6.png' style='margin: 0px, 0px, 0px, 0px; border: none; background: none;box-shadow: none; '/><br/></td>
+                <td><img src='img/Landsat8-campfire.png' style='margin: 0px, 0px, 0px, 0px; border: none; background: none;box-shadow: none; '/><br/></td>
                 <td><img src='img/slide6-2.png' style='margin: 0px, 0px, 0px, 0px; border: none; background: none;box-shadow: none; '/><br/></td>
             </table>
         </section>
