@@ -86,15 +86,6 @@
             <p style='text-align: left'>Train a Deep Learning model to Determine Vegetation Health</p>
         </section>
 
-        <section data-background-image="img/ZsMwlm2-purpleish.jpg">
-            <h3>Data: Sentinel-2</h3>
-            <p style='text-align: left'>Earth observation mission from ESA</p>
-            <p style='text-align: left'>13 spectral bands, from RGB to SWIR (Short Wave Infrared)</p>
-            <p style='text-align: left'>Spatial resolution: 10m/px (RGB bands)</p>
-            <p style='text-align: left'>5 day revisit time</p>
-            <p style='text-align: left'>Free and open data policy</p>
-            <img src='img/slide5.png' style=' position: absolute; right: 0px; bottom: 0px; width: 30%; height: 30%; margin: 0px, 0px, 0px, 0px; border: none; background: none;box-shadow: none; '/><br/>
-        </section>
                 <section data-background-image="img/ZsMwlm2-purpleish.jpg">
                     <h3>Data: Landsat8</h3>
                     <p style='text-align: left'>Earth observation mission from EOS</p>
@@ -152,11 +143,12 @@
 
                 <section data-background-image="img/ZsMwlm2-greenish.jpg">
                     <h4>Normalized Difference Vegetation Index (NDVI)</h4>
-                    <p style='text-align: left'>Used to monitor agriculture production, drought, hazardous fire zones</p>
+                    <p style="font-size: 80%;">Used to monitor agriculture production, drought, hazardous fire zones</p>
                     <div style="background: #c9c9c9;">
                         <img src='img/NDVI-formula.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
                     </div>
-                    <p style='text-align: left'><i>NDVI Range: [-1,1]</i></p>
+                    <p style="font-size: 50%;"><i>Bands 5 and 4 in Landsat8 images</i></p>
+                    <p style="font-size: 50%;"><i>NDVI Range: [-1,1]</i></p>
                 </section>
 
                 <section data-background-image="img/ZsMwlm2-yellowish.jpg">
@@ -169,12 +161,12 @@
                 <section data-background-image="img/ZsMwlm2-yellowish.jpg">
                     <h3></h3>
                     <table>
-                        <tr><th>Cover</th><th>Red</th><th>NIR</th><th>NDVI</th></tr>
+                        <tr><th><b>Cover</b></th><th><b>Red</b></th><th><b>NIR</b></th><th><b>NDVI</b></th></tr>
                         <tr><td>Dense Vegetation</td><td>0.1</td><td>0.5</td><td>0.7</td></tr>
                         <tr><td>Dry Soil</td><td>0.269</td><td>0.283</td><td>0.025</td></tr>
                         <tr><td>Clouds</td><td>0.227</td><td>0.228</td><td>0.002</td></tr>
                         <tr><td>Snow and Ice</td><td>0.375</td><td>0.342</td><td>-0.046</td></tr>
-                        <tr><td>Snow and Ice</td><td>0.022</td><td>0.013</td><td>-0.257</td></tr>
+                        <tr><td>Water</td><td>0.022</td><td>0.013</td><td>-0.257</td></tr>
                     </table>
                     <p style="font-size: 35%;"><i>https://grindgis.com/blog/vegetation-indices-arcgis#1</i></p>
                 </section>
