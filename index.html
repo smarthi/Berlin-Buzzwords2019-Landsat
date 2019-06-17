@@ -250,39 +250,7 @@
                 <img src='img/CloudMaskExample.PNG' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
             </div>
         </section>
-        <section data-background-image="img/ZsMwlm2-yellowish.jpg">
-            <h4>Model Training</h4>
-            <p style='text-align: left'>Two Dense Layers with ReLU and Softmax activations</p>
-            <p style='text-align: left'>Dropout is set to 0.2</p>
-            <p style='text-align: left'>Adam Optimizer</p>
-            <p style='text-align: left'>Cross Entropy loss function</p>
-            <p style='text-align: left'>Keras expects the labels in a one hot vector for training</p>
-        </section>
-        <section data-background-image="img/ZsMwlm2-purpleish.jpg">
-            <h4>Model Training</h4>
-            <div style="background: #c9c9c9;">
-                <img src='img/keras-model.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-            </div>
-        </section>
-        <section data-background-image="img/ZsMwlm2-purpleish.jpg">
-            <h4>Model Training - Keras</h4>
 
-            <pre><code data-trim data-noescape>
-            # Add the model layers
-            model = tf.keras.models.Sequential([
-              tf.keras.layers.Dense(64, activation=tf.nn.relu),
-              tf.keras.layers.Dropout(0.2),
-              tf.keras.layers.Dense(nClasses, activation=tf.nn.softmax)
-            ])
-
-            # Compile it with the optimizer and loss function
-            model.compile(optimizer=tf.train.AdamOptimizer(),
-                          loss='categorical_crossentropy',
-                          metrics=['accuracy'])
-
-        </code></pre>
-
-        </section>
         <section data-background-image="img/ZsMwlm2-purpleish.jpg">
             <h4>Feature Engineering</h4>
             <ul>
@@ -301,7 +269,7 @@
         </section>
 
         <section data-background-image="img/ZsMwlm2-purpleish.jpg">
-            <h4>Predictions</h4>
+            <h4>Prediction Labels</h4>
             <div style="background: #c9c9c9;">
                 <img src='img/Predictions.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
             </div>
@@ -312,203 +280,40 @@
                 <img src='img/slide15.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
             </div>
         </section>
+
+        <section data-background-image="img/ZsMwlm2-yellowish.jpg">
+            <h4>Model Training</h4>
+            <p style='text-align: left'>Two Dense Layers with ReLU and Softmax activations</p>
+            <p style='text-align: left'>Dropout is set to 0.2</p>
+            <p style='text-align: left'>Adam Optimizer</p>
+            <p style='text-align: left'>Cross Entropy loss function</p>
+            <p style='text-align: left'>Keras expects the labels in a one hot vector for training</p>
+        </section>
         <section data-background-image="img/ZsMwlm2-purpleish.jpg">
-            <h4>Segmentation Goals</h4>
+            <h4>Model Training</h4>
             <div style="background: #c9c9c9;">
-                <img src='img/slide16.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
+                <img src='img/keras-model.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
             </div>
         </section>
-        <section data-background-image="img/ZsMwlm2-yellowish.jpg">
-            <h3>Approach U-Net</h3>
-            <ul>
-                <li>State of the Art CNN for Image Segmentation</li>
-                <li>Commonly used with biomedical images</code></li>
-                <li>Best Architecture for tasks like this</li>
-            </ul>
-            <p style="font-size: 35%;"><i>O. Ronneberger, P.Fischer, and T. Brox. U-net: Convolutional networks for biomedical image segmentation. arxiv:1505.04597, 2015</i></p>
-        </section>
         <section data-background-image="img/ZsMwlm2-purpleish.jpg">
-            <h4>U-Net Architecture</h4>
-            <div style="background: #c9c9c9;">
-                <img src='img/unet_architecture.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-            </div>
-        </section>
-        <section data-background-image="img/ZsMwlm2-yellowish.jpg">
-            <h3>U-Net Building Blocks</h3>
+            <h4>Model Training - Keras</h4>
             <pre><code data-trim data-noescape>
-                def conv_block(channels, kernel_size):
-                   out = nn.HybridSequential()
-                   out.add(
-                       nn.Conv2D(channels, kernel_size, padding=1, use_bias=False),
-                       nn.BatchNorm(),
-                       nn.Activation('relu')
-                   )
-                   return out
-            </code></pre>
-            <pre><code data-trim data-noescape>
-                def down_block(channels):
-                   out = nn.HybridSequential()
-                   out.add(
-                       conv_block(channels, 3),
-                       conv_block(channels, 3)
-                   )
-                   return out
-            </code></pre>
-        </section>
-        <section data-background-image="img/ZsMwlm2-yellowish.jpg">
-            <h3>U-Net Building Blocks (2)</h3>
-            <pre><code data-trim data-noescape>
-                class up_block(nn.HybridBlock):
-                   def __init__(self, channels, shrink=True, **kwargs):
-                       super(up_block, self).__init__(**kwargs)
-                       self.upsampler = nn.Conv2DTranspose(channels=channels, kernel_size=4,
-                                                            strides=2, padding=1, use_bias=False)
-                       self.conv1 = conv_block(channels, 1)
-                       self.conv3_0 = conv_block(channels, 3)
-                       if shrink:
-                           self.conv3_1 = conv_block(int(channels/2), 3)
-                       else:
-                           self.conv3_1 = conv_block(channels, 3)
-                   def hybrid_forward(self, F, x, s):
-                       x = self.upsampler(x)
-                       x = self.conv1(x)
-                       x = F.relu(x)
-                       x = F.Crop(*[x,s], center_crop=True)
-                       x = s + x
-                       x = self.conv3_0(x)
-                       x = self.conv3_1(x)
-                       return x
-            </code></pre>
-        </section>
-        <section data-background-image="img/ZsMwlm2-yellowish.jpg">
-            <h3>U-Net: Training data</h3>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>Ground truth: tulip fields in the Netherlands</li>
-                                <li>Provided by Geopedia, from Sinergise</li>
-                                <img src='img/slide21.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-                            </ul>
-                        </td>
-                        <td>
-                            <img src='img/slide21-2.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-                        </td>
+            # Add the model layers
+            model = tf.keras.models.Sequential([
+              tf.keras.layers.Dense(64, activation=tf.nn.relu),
+              tf.keras.layers.Dropout(0.2),
+              tf.keras.layers.Dense(nClasses, activation=tf.nn.softmax)
+            ])
 
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section data-background-image="img/ZsMwlm2-purpleish.jpg">
-            <h4>Loss function: Soft Dice Coefficient loss</h4>
-            <img src='img/slide22.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-            <p style='...'>Prediction = Probability of each pixel belonging to a Tulip Field (Softmax output)</p>
-            <p style='...'>ε serves to prevent division by zero</p>
-        </section>
-        <section data-background-image="img/ZsMwlm2-greenish.jpg">
-            <h4>Evaluation Metric: Intersection Over Union(IoU)</h4>
-            <img src='img/slide23.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-            <p style='...'><i>Aka</i> Jaccard Index</p>
-            <p style='...'>Similar to Dice coefficient, standard metric for image segmentation </p>
-        </section>
-        <section data-background-image="img/ZsMwlm2-greenish.jpg">
-            <h4>Evaluation Metric: Intersection Over Union(IoU)</h4>
-            <img src='img/iou.jpg' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-        </section>
-        <section data-background-image="img/ZsMwlm2-yellowish.jpg">
-            <h3>Results</h3>
-            <ul>
-                <li><b>IoU = 0.73</b> after 23 training epochs</li>
-                <li>Related results: DSTL Kaggle competition</li>
-                <li>IoU = 0.84 on crop vs building/road/water/etc segmentation</li>
-            </ul>
-            <p style="font-size: 35%;"><i>https://www.kaggle.com/c/dstl-satellite-imagery-feature-detection/discussion/29790</i></p>
-        </section>
-                <section data-background-image="img/ZsMwlm2-purpleish.jpg">
-                    <h4>No Tulip Fields</h4>
-                    <div style="background: #c9c9c9;">
-                        <img src='img/no-tulips-segmentation.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-                    </div>
-                </section>
-                <section data-background-image="img/ZsMwlm2-greenish.jpg">
-                    <h4>Large Tulip Fields</h4>
-                    <div style="background: #c9c9c9;">
-                        <img src='img/tulips-segmentation.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-                    </div>
-                </section>
-                <section data-background-image="img/ZsMwlm2-redish.jpg">
-                    <h4>Small Tulips Fields</h4>
-                    <div style="background: #c9c9c9;">
-                        <img src='img/tulips1-segmentation.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-                    </div>
-                </section>
-        <section data-background-image="img/ZsMwlm2-yellowish.jpg">
-            <h3>Multi-Spectral Images</h3>
-            <ul>
-                <li>Measures reflectances with wavelength from 440nm - 2200nm</li>
-                <li>13 bands covering - visible, near infrared and shortwave infrared spectrum</li>
-            </ul>
-            <p style="font-size: 35%;"><i>https://www.kaggle.com/c/dstl-satellite-imagery-feature-detection/discussion/29790</i></p>
-        </section>
-        <section data-background-image="img/ZsMwlm2-yellowish.jpg">
-            <img src='img/all_bands.png' style='margin: 0px, 20px, 0px, 20px; ' />
+            # Compile it with the optimizer and loss function
+            model.compile(optimizer=tf.train.AdamOptimizer(),
+                          loss='categorical_crossentropy',
+                          metrics=['accuracy'])
+
+            </code></pre>
         </section>
 
-                <section data-background-image="img/ZsMwlm2-redish.jpg">
-                    <h4>RGB vs MultiSpectral (Full Bloom)</h4>
-                    <div style="background: #c9c9c9;">
-                        <img src='img/comp1.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-                    </div>
-                </section>
-                <section data-background-image="img/ZsMwlm2-redish.jpg">
-                    <h4>RGB vs MultiSpectral (Full Bloom)</h4>
-                    <div style="background: #c9c9c9;">
-                        <img src='img/comp5.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-                    </div>
-                </section>
-                <section data-background-image="img/ZsMwlm2-redish.jpg">
-                    <h4>RGB vs MultiSpectral (Cloudy)</h4>
-                    <div style="background: #c9c9c9;">
-                        <img src='img/comp6.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-                    </div>
-                </section>
-                <section data-background-image="img/ZsMwlm2-redish.jpg">
-                    <h4>RGB vs MultiSpectral (Cloudy)</h4>
-                    <div style="background: #c9c9c9;">
-                        <img src='img/comp7.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-                    </div>
-                </section>
-                <section data-background-image="img/ZsMwlm2-redish.jpg">
-                    <h4>RGB vs MultiSpectral (Complex Tulip Fields)</h4>
-                    <div style="background: #c9c9c9;">
-                        <img src='img/comp8.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-                    </div>
-                </section>
-                <section data-background-image="img/ZsMwlm2-redish.jpg">
-                    <h4>RGB vs MultiSpectral (Complex Tulip Fields)</h4>
-                    <div style="background: #c9c9c9;">
-                        <img src='img/comp9.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-                    </div>
-                </section>
-                <section data-background-image="img/ZsMwlm2-redish.jpg">
-                    <h4>RGB vs MultiSpectral (Tulips Not Obvious)</h4>
-                    <div style="background: #c9c9c9;">
-                        <img src='img/comp3.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-                    </div>
-                </section>
-                <section data-background-image="img/ZsMwlm2-redish.jpg">
-                    <h4>RGB vs MultiSpectral (Tulips Not Obvious)</h4>
-                    <div style="background: #c9c9c9;">
-                        <img src='img/comp4.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-                    </div>
-                </section>
-                <section data-background-image="img/ZsMwlm2-redish.jpg">
-                    <h4>Comparison: RGB vs MultiSpectral</h4>
-                    <div style="background: #c9c9c9;">
-                        <img src='img/rgb_vs_ms.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-                    </div>
-                </section>
+
                 <section data-background-image="img/ZsMwlm2-redish.jpg">
                     <h4>How to Scale - Batch or Stream ?</h4>
                     <br/>
@@ -626,7 +431,6 @@
                 <li>Apache Beam: https://beam.apache.org</li><br/>
                 <li>Apache Flink: https://flink.apache.org</li><br/>
                 <li>Slides: https://smarthi.github.io/Berlin-Buzzwords2019-Landsat</li><br/>
-                <li>Code: https://github.com/smarthi/satellite-images</li>
             </ul>
         </section>
         <section data-background-image="img/ZsMwlm2.jpg">
