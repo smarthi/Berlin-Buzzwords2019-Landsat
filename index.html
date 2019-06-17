@@ -265,6 +265,7 @@
                 <li>Use Landsat8 Surface Reflectance data for computing cloud mask</li>
                 <li>Result: Each pixel is classified as 1 of {Vegetation, Barren, Snow/Ice, Water, Cloud} </li>
                 <li>Ignore the Cloud pixels</li>
+                <li>Compute NDVI from Bands B4 and B5, add to the feature vector</li>
             </ul>
         </section>
 
@@ -384,10 +385,10 @@
                 with beam.Pipeline(options=pipeline_options) as p:
                     filtered_images = (p | "Read Images" >> beam.Create(glob.glob(known_args.input + '*wms*' + '.png'))
                     | "Batch elements" >> beam.BatchElements(0, known_args.batchsize)3
-                    | "Filter Cloudy images" >> beam.ParDo(FilterCloudyFn.FilterCloudyFn(known_args.models)))
+                    | "Apply Cloud Mask" >> beam.ParDo(CloudMaskFn.CloudMaskFn()))
 
-                filtered_images | "Segment for Land use" >>
-                            beam.ParDo(UNetInference.UNetInferenceFn(known_args.models, known_args.output))
+                filtered_images | "Predict Land Use" >>
+                            beam.ParDo(Prediction.PredictionFn(known_args.models, known_args.output))
             </code></pre>
         </section>
 
