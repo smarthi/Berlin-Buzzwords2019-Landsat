@@ -250,7 +250,39 @@
                 <img src='img/CloudMaskExample.PNG' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
             </div>
         </section>
+        <section data-background-image="img/ZsMwlm2-yellowish.jpg">
+            <h4>Model Training</h4>
+            <p style='text-align: left'>Two Dense Layers with ReLU and Softmax activations</p>
+            <p style='text-align: left'>Dropout is set to 0.2</p>
+            <p style='text-align: left'>Adam Optimizer</p>
+            <p style='text-align: left'>Cross Entropy loss function</p>
+            <p style='text-align: left'>Keras expects the labels in a one hot vector for training</p>
+        </section>
+        <section data-background-image="img/ZsMwlm2-purpleish.jpg">
+            <h4>Model Training</h4>
+            <div style="background: #c9c9c9;">
+                <img src='img/keras-model.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
+            </div>
+        </section>
+        <section data-background-image="img/ZsMwlm2-purpleish.jpg">
+            <h4>Model Training - Keras</h4>
 
+            <pre><code data-trim data-noescape>
+            # Add the model layers
+            model = tf.keras.models.Sequential([
+              tf.keras.layers.Dense(64, activation=tf.nn.relu),
+              tf.keras.layers.Dropout(0.2),
+              tf.keras.layers.Dense(nClasses, activation=tf.nn.softmax)
+            ])
+
+            # Compile it with the optimizer and loss function
+            model.compile(optimizer=tf.train.AdamOptimizer(),
+                          loss='categorical_crossentropy',
+                          metrics=['accuracy'])
+
+        </code></pre>
+
+        </section>
         <section data-background-image="img/ZsMwlm2-purpleish.jpg">
             <h4>Feature Engineering</h4>
             <ul>
