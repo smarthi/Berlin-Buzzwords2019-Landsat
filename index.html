@@ -218,7 +218,7 @@
             <p style='text-align: left'>Approach: Mask the clouds from different bands</p>
             <p style='text-align: left'>Compute Median Cloud Masking Composite for the year</p>
         </section>
-        <section data-background-image="img/ZsMwlm2-yellowish.jpg">
+        <section data-background-image="img/ZsMwlm2-blueish.jpg">
             <h3>Cloud Masking Function</h3>
             <pre><code data-trim data-noescape>
                 /**
@@ -251,6 +251,29 @@
             </div>
         </section>
 
+        <section data-background-image="img/ZsMwlm2-purpleish.jpg">
+            <h4>Feature Engineering</h4>
+            <ul>
+                <li>Use Bands B2, B3, B4, B5, B6, B7 for training and prediction</li>
+                <li>Apply the Cloud Masking function to each of the bands</code></li>
+            </ul>
+        </section>
+
+        <section data-background-image="img/ZsMwlm2-purpleish.jpg">
+            <h4>Feature Engineering (Contd)</h4>
+            <ul>
+                <li>Use Landsat8 Surface Reflectance data for computing cloud mask</li>
+                <li>Result: Each pixel is classified as 1 of {Vegetation, Barren, Snow/Ice, Water, Cloud} </li>
+                <li>Ignore the Cloud pixels</li>
+            </ul>
+        </section>
+
+        <section data-background-image="img/ZsMwlm2-purpleish.jpg">
+            <h4>Predictions</h4>
+            <div style="background: #c9c9c9;">
+                <img src='img/Predictions.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
+            </div>
+        </section>
         <section data-background-image="img/ZsMwlm2-purpleish.jpg">
             <h4>Workflow</h4>
             <div style="background: #c9c9c9;">
