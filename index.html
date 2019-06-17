@@ -178,22 +178,32 @@
                     </div>
                 </section>
                 <section data-background-image="img/ZsMwlm2-purpleish.jpg">
-                    <h4>Goal: Identify Vegetation from Landsat8 Images</h4>
+                    <h4>Goal: Identify Vegetation Index from Landsat8 Images</h4>
                     <div style="background: #c9c9c9;">
-                        <img src='img/slide16.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
+                        <img src='img/ParadiseOct172018.jpg' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
                     </div>
                 </section>
-        <section data-background-image="img/ZsMwlm2-greenish.jpg">
-            <h3>Data acquisition</h3>
-            <p style='text-align: left'>Images downloaded using Sentinel Hub’s WMS (web mapping service) for Landsat</p>
-            <table>
-                <td><img src='img/Landsat8-campfire.png' style='margin: 0px, 0px, 0px, 0px; border: none; background: none;box-shadow: none; '/><br/></td>
-                <td><img src='img/slide6-2.png' style='margin: 0px, 0px, 0px, 0px; border: none; background: none;box-shadow: none; '/><br/></td>
-            </table>
-        </section>
+                <section data-background-image="img/ZsMwlm2-greenish.jpg">
+                    <h3>Data Acquisition</h3>
+                    <p style='text-align: left'>Images downloaded from AWS Earth (available as Open Data)</p>
+                    <p style='text-align: left'>Data refreshed continually</p>
+                    <pre><code data-trim data-noescape>
+                aws s3 sync s3://landsat-pds/c1/L8/044/033 ~/Downloads/landsat-044
+                </code>
+                </pre>
+                    <table>
+                        <td><img src='img/ParadiseNov82018.jpg' style='margin: 0px, 0px, 0px, 0px; border: none; background: none;box-shadow: none; '/><br/></td>
+                    </table>
+                </section>
+                <section data-background-image="img/ZsMwlm2-greenish.jpg">
+                    <h3>Data</h3>
+                    <p style='text-align: left'></p>
+                    <img src='img/Landsat-AWS.png' style='margin: 0px, 0px, 0px, 0px; border: none; background: none;box-shadow: none; '/><br/>
+                </section>
+
         <section data-background-image="img/ZsMwlm2-greenish.jpg">
             <h3>Data</h3>
-            <p style='text-align: left'>256 x 256 px images, RGB</p>
+            <p style='text-align: left'></p>
             <img src='img/slide7.png' style='margin: 0px, 0px, 0px, 0px; border: none; background: none;box-shadow: none; '/><br/>
         </section>
         <section data-background-image="img/ZsMwlm2-purpleish.jpg">
@@ -208,12 +218,7 @@
             <p style='text-align: left'>Approach: train a Neural Network to classify images as clear or cloudy</p>
             <p style='text-align: left'>CNN Architectures: ResNet50 and ResNet101</p>
         </section>
-        <section data-background-image="img/ZsMwlm2-purpleish.jpg">
-            <h4>ResNet building block</h4>
-            <div style="background: #c9c9c9;">
-                <img src='img/residual_block.png' style='margin: 0px, 20px, 0px, 20px; border: none; background: none;box-shadow: none; '/><br/>
-            </div>
-        </section>
+
         <section data-background-image="img/ZsMwlm2-purpleish.jpg">
             <h3>Filter Clouds: training data</h3>
             <p style='text-align: left'>‘Planet: Understanding the Amazon from Space’ Kaggle competition</p>
