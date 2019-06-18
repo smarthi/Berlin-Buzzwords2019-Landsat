@@ -223,8 +223,8 @@
             <pre><code data-trim data-noescape>
                 /**
                  * Function to mask clouds based on the pixel_qa band of Landsat 8 SR data.
-                 * @param {ee.Image} image input Landsat 8 SR image
-                 * @return {ee.Image} cloudmasked Landsat 8 image
+                 * @param {Image} image input Landsat 8 SR image
+                 * @return {Image} cloudmasked Landsat 8 image
                  */
                 function maskL8sr(image) {
                   // Bits 3 and 5 are cloud shadow and cloud, respectively.
