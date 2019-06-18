@@ -2,11 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14451116-65ba-4ec4-b510-be1e2543931e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/BarrenLandsat.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Vegetation.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/slide12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/slide15.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/slide15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/DataAugmentation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/aug_after.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/aug_og.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/comp1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/comp2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/comp3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/comp4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/comp5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/comp6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/comp7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/comp8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/comp9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/cross_entropy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/data_ex_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/data_ex_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/data_ex_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/example_image_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/example_image_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/example_image_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/example_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/example_tulips.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iou-small.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iou.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/no-tulips-segmentation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/rgb_inference.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/rgb_vs_ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/slide-aug.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/slide10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/slide13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/slide14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/slide16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/slide21-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tulip-fields.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tulips-segmentation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tulips1-segmentation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/unet_architecture.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,11 +53,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="277" column="35" selection-start-line="277" selection-start-column="35" selection-end-line="277" selection-end-column="35" />
+            <state relative-caret-position="328">
+              <caret line="417" column="31" lean-forward="true" selection-start-line="417" selection-start-column="31" selection-end-line="417" selection-end-column="31" />
               <folding>
                 <element signature="e#5737#5761#0" expanded="true" />
                 <element signature="e#5788#5812#0" expanded="true" />
@@ -37,33 +69,33 @@
                 <element signature="e#10556#10579#0" expanded="true" />
                 <element signature="e#5930#5958#0" expanded="true" />
                 <element signature="e#5170#5198#0" expanded="true" />
+                <element signature="e#16123#16147#0" expanded="true" />
+                <element signature="e#16218#16242#0" expanded="true" />
+                <element signature="e#16284#16308#0" expanded="true" />
+                <element signature="e#16343#16367#0" expanded="true" />
+                <element signature="e#16415#16439#0" expanded="true" />
+                <element signature="e#16642#16670#0" expanded="true" />
+                <element signature="e#16719#16806#0" expanded="true" />
+                <element signature="e#17760#17788#0" expanded="true" />
+                <element signature="e#17837#17924#0" expanded="true" />
+                <element signature="e#18139#18167#0" expanded="true" />
+                <element signature="e#18216#18303#0" expanded="true" />
+                <element signature="e#18518#18546#0" expanded="true" />
+                <element signature="e#18595#18682#0" expanded="true" />
+                <element signature="e#19051#19079#0" expanded="true" />
+                <element signature="e#19141#19228#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/img/Water.jpeg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/img/Vegetation.jpeg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/img/BarrenLandsat.jpeg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/img/slide14.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/img/slide15.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/img/inference-pipeline.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
@@ -154,7 +186,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560645921935</updated>
-      <workItem from="1560645923164" duration="21650000" />
+      <workItem from="1560645923164" duration="26588000" />
     </task>
     <task id="LOCAL-00001" summary="First commit for BBuzz19 talk">
       <created>1560646365105</created>
@@ -240,11 +272,74 @@
       <option name="project" value="LOCAL" />
       <updated>1560809036982</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Feature Engg and Predictions">
+      <created>1560811582686</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1560811582687</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Feature Engg and Predictions">
+      <created>1560811716908</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1560811716908</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Rearranged the slides">
+      <created>1560812198296</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1560812198296</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added Prediction slides">
+      <created>1560812854323</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1560812854323</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added Prediction slides">
+      <created>1560813073769</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1560813073769</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Minor tweaks">
+      <created>1560815491019</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1560815491019</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Minor tweaks">
+      <created>1560816577184</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1560816577184</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Minor tweaks">
+      <created>1560817167309</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1560817167309</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added more images">
+      <created>1560841822353</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1560841822353</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21650000" />
+    <option name="totallyTimeSpent" value="26588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="221" y="79" width="1400" height="912" extended-state="0" />
@@ -291,84 +386,18 @@
     <MESSAGE value="More slides" />
     <MESSAGE value="More slides and images" />
     <MESSAGE value="Added Cloud Mask Example" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Cloud Mask Example" />
+    <MESSAGE value="Feature Engg and Predictions" />
+    <MESSAGE value="Rearranged the slides" />
+    <MESSAGE value="Added Prediction slides" />
+    <MESSAGE value="Minor tweaks" />
+    <MESSAGE value="Added more images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more images" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/batch.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/alignments_thin.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/beam1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/Complete-pipeline.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/crossing.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/diagonal-left.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/comp1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/lstm.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/M27Subaru_colombari1024_q100_watermark.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/cross_entropy.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/data_ex_1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/inference-pipeline.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/data_ex_2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/campfire_oli_2018312_crop_lrg.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/eval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="136" selection-start-line="136" selection-end-line="136" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/slide7.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/slide6-2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/slide6.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/img/slide5.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/slide3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/img/ParadiseOct172018.jpg">
@@ -385,12 +414,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/slide8.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/slide10.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/img/slide21.png">
       <provider selected="true" editor-type-id="images" />
@@ -425,13 +448,7 @@
     <entry file="file://$PROJECT_DIR$/img/processes.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/slide16.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/radiant_flux.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/rgb_inference.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/img/ParadiseNov82018.jpg">
@@ -443,19 +460,100 @@
     <entry file="file://$PROJECT_DIR$/img/slide12.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/img/BarrenLandsat.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/Vegetation.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/BarrenLandsat.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/Water.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/slide8.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/slide3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/beam1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/beam-model.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/beam_logo_navbar.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/slide-aug.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/slide21-2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/slide16.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/img/slide14.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/slide13.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/slide10.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/rgb_inference.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/example_image_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/example_image_2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/img/slide15.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/BarrenLandsat.jpg">
+    <entry file="file://$PROJECT_DIR$/img/data_ex_3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/data_ex_2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/data_ex_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/cross_entropy.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/comp9.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/comp8.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/comp2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/comp1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/aug_after.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/aug_og.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/inference-pipeline.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="277" column="35" selection-start-line="277" selection-start-column="35" selection-end-line="277" selection-end-column="35" />
+        <state relative-caret-position="328">
+          <caret line="417" column="31" lean-forward="true" selection-start-line="417" selection-start-column="31" selection-end-line="417" selection-end-column="31" />
           <folding>
             <element signature="e#5737#5761#0" expanded="true" />
             <element signature="e#5788#5812#0" expanded="true" />
@@ -467,18 +565,24 @@
             <element signature="e#10556#10579#0" expanded="true" />
             <element signature="e#5930#5958#0" expanded="true" />
             <element signature="e#5170#5198#0" expanded="true" />
+            <element signature="e#16123#16147#0" expanded="true" />
+            <element signature="e#16218#16242#0" expanded="true" />
+            <element signature="e#16284#16308#0" expanded="true" />
+            <element signature="e#16343#16367#0" expanded="true" />
+            <element signature="e#16415#16439#0" expanded="true" />
+            <element signature="e#16642#16670#0" expanded="true" />
+            <element signature="e#16719#16806#0" expanded="true" />
+            <element signature="e#17760#17788#0" expanded="true" />
+            <element signature="e#17837#17924#0" expanded="true" />
+            <element signature="e#18139#18167#0" expanded="true" />
+            <element signature="e#18216#18303#0" expanded="true" />
+            <element signature="e#18518#18546#0" expanded="true" />
+            <element signature="e#18595#18682#0" expanded="true" />
+            <element signature="e#19051#19079#0" expanded="true" />
+            <element signature="e#19141#19228#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/Water.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/Vegetation.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/BarrenLandsat.jpeg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
   <component name="masterDetails">
